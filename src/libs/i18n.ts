@@ -2,9 +2,11 @@ import i18n from "i18next";
 import detector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import translationEN from "./public/locales/en/translation.json";
-import translationFA from "./public/locales/fa/translation.json";
-const isServer = typeof window === "undefined";
+import translationEN from "../../public/locales/en/translation.json";
+import translationFA from "../../public/locales/fa/translation.json";
+
+export const isServer = typeof window === "undefined";
+
 const resources = {
   en: {
     translation: translationEN,
@@ -19,7 +21,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: (!isServer && localStorage.getItem("i18nextLng")) || "fa",
+    fallbackLng: (!isServer && localStorage.getItem("i18nextLng")) || "en",
     saveMissing: true,
     keySeparator: false,
 

@@ -1,4 +1,4 @@
-import { LocalesType } from "../constants/locales";
+import { LocalesType } from "@constants/locales";
 import { FC } from "react";
 import { TFunction } from "react-i18next";
 import { NextPage } from "next";
